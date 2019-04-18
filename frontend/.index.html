@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AirBnb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+    <script defer src="src/api.js"></script>
+    <script defer src="src/index.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar is-primary is-fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="navbar-item" style="font-weight: bold;" onclick="mainShowPage()">
+                    AirBnb
+                </a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#" class="navbar-item is-active" onclick="">LOGIN</a>
+                    <a href="#" class="navbar-item is-active" onclick="">SIGN UP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div id="rooms-list" class="column notification is-primary is-3">
+
+                    </div>
+                    <div id="show-room" class="column">
+                        <div class="notification is-warning">
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+<!-- NAVBAR MENU SCRIPT -->
+    <script type="text/javascript">
+        (function () {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('#' + burger.dataset.target);
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                nav.classList.toggle('is-active')
+            });
+        })();
+    </script>
+<!-- FOOTER -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>AirBnb</strong> by <strong>Manu</strong></a>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
